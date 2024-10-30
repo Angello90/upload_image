@@ -1,0 +1,49 @@
+.container_loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #FFFFFF;
+    width: 40%;
+    height: 15vh;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 9px 9px 11px 5px #eeeeee;
+}
+
+#loader{
+    background-color: #E5E7EB;
+    height: 7.5px;
+    width: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.container_loader span{
+    font-family: "Inter", sans-serif;
+    font-weight: 550;
+    color: #3662E3;
+}
+
+.container_loader p{
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    color: #000000;
+}
+
+.loader{
+    position: absolute;
+    background-color: #3662E3;
+    height: 7.5px;
+    width: 70px;
+    border-radius: 10px;
+    animation: slide 2s ease-in-out infinite;
+    left: 100px;
+}
+
+@keyframes slide {
+    0% { left: 0; }
+    50% { left: calc(100% - 70px); } 
+    100% { left: 0; }
+}

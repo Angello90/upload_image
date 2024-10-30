@@ -1,0 +1,11 @@
+#page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 75px);
+    background-color: #F9FAFB;
+}
+
+#page.page_dark{
+    background: #121826;
+}

@@ -1,0 +1,36 @@
+#header_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F9FAFB;
+    height: 75px;
+    padding: 15px 72px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+#header_main.header_main_dark{
+    background-color: #121826;
+    border-bottom-color: #212936;
+}
+#header_main.header_main_dark #change_{
+    background-color: #4D5562;
+    border-color: #F9FAFBCC;
+}
+
+#header_main.header_main_dark #img_logo{
+    color: #ffffff;
+}
+
+#img_logo{
+    width: 140px;
+}
+
+#change_{
+    display: flex;
+    align-items: center;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
