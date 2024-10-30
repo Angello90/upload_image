@@ -1,7 +1,7 @@
 import "./css/imageReader.css";
 
 
-function ImageReader({ image }) {
+function ImageReader({ image, theme }) {
     const handle_download = async () => {
         try {
             const name = new URL(image).pathname.split("/").pop();
@@ -29,7 +29,7 @@ function ImageReader({ image }) {
     }
     return (
         <>
-            <div className="container_image_reader">
+            <div id="container_image_reader" className={theme === 'dark'? "container_image_dark": ""}>
                 <div id="drag_and_drop">
                     <img id="image_file" src={image} alt="image" />
                 </div>

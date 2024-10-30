@@ -5,9 +5,9 @@ import "./css/loader.css";
 
 
 
-function Loader() {
+function Loader({theme}) {
     return (
-        <div className='container_loader'>
+        <div className="container_loader" id={theme === 'dark' ? "loader_dark": ""}>
             <p><span>Uploading</span>, please wait..</p>
             <div id="loader">
                 <div className="loader"></div>

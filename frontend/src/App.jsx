@@ -6,7 +6,7 @@ import Loader from './components/loader/loader'
 import ImageReader from './components/imageReader/imageReader'
 
 
-const MAX_FILE_SIZE = 2e+6
+const MAX_FILE_SIZE = 2097152
 
 function App() {
 
@@ -111,8 +111,8 @@ function App() {
       <Header onclick={handlerChange} link_image={link_image} theme={theme}/>
       <div id='page' className={theme === 'dark'? "page_dark": ""}>
         {flag_DragAndDrop && <DragAndDrop ondrop={handle_drop} theme={theme} />}
-        {flag_ImageReader && <ImageReader image={image}/>}
-        {flag_Loader && <Loader />}
+        {flag_ImageReader && <ImageReader image={image} theme={theme}/>}
+        {flag_Loader && <Loader theme={theme} />}
       </div>
     </>
   )
