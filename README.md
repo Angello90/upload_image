@@ -1,7 +1,8 @@
-# Upload images
+# 📸 Upload Images
 
-## Présentation
+## ✨ Présentation
 
-Ce projet a pour but l'hebergement d'image(JPG, PNG, JPEG) peu volumineux. Il se divise en 2 partie: 
-- [Le Backend](backend/README.md)
-- [Le Frontend](frontend/README.md)
+Ce projet a pour but l'hébergement d'images (JPG, PNG, JPEG) de faible volume. Il se divise en 2 parties :
+
+- 🛠️ [Le Backend](backend/README.md)
+- 🎨 [Le Frontend](frontend/README.md)
