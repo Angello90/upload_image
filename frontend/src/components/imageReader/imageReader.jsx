@@ -1,7 +1,11 @@
 import "./css/imageReader.css";
+import Share from "../share/share";
+import { useState } from "react";
 
 
 function ImageReader({ image, theme }) {
+    const [flag_Share, setflags_Share] = useState(false);
+
     const handle_download = async () => {
         try {
             const name = new URL(image).pathname.split("/").pop();
@@ -27,6 +31,16 @@ function ImageReader({ image, theme }) {
             console.error("Erreur lors du téléchargement de l'image:", error);
         }
     }
+
+    const handle_share = () => {
+        setflags_Share(!flag_Share);
+    }
+
+    const close_share = () => {
+        setflags_Share(false);
+    }
+
+
     return (
         <>
             <div id="container_image_reader" className={theme === 'dark'? "container_image_dark": ""}>
@@ -34,7 +48,9 @@ function ImageReader({ image, theme }) {
                     <img id="image_file" src={image} alt="image" />
                 </div>
                 <div className="links">
-                    <a href={image} target="_blank" rel="noreferrer"><img src="src\assets\Link.svg" alt="share image" />Share</a>
+                    <button onClick={handle_share}><img src="src\assets\Link.svg" alt="share image" />Share</button>
+                    {flag_Share && <Share theme={theme} image={image} handle_close={close_share}/>}
+                    {/* <a href={image} target="_blank" rel="noreferrer"><img src="src\assets\Link.svg" alt="share image" />Share</a> */}
                     <button onClick={handle_download}><img src="src\assets\download.svg" alt="dowload image" />Download</button>
                 </div>
             </div>

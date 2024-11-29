@@ -48,7 +48,7 @@ function DragAndDrop({ ondrop, theme}) {
             >
                 <div className="section_text_upload">
                     <img id='image_exit' src="src/assets/exit.svg" alt="exit" />
-                    <p id="title_of_this">Drag & drop a file or <input type="file" name="browse_files" id="browse_files" style={{ display: 'none' }} /><label htmlFor="browse_files" id="browse_files">browse files</label></p>
+                    <p id="title_of_this">Drag & drop a file or <input type="file" accept="image/png, image/jpeg, image/gif" name="browse_files" id="browse_files" style={{ display: 'none' }} /><label htmlFor="browse_files" id="browse_files">browse files</label></p>
                     <p id="format">JPG, PNG or GIF - Max file size 2MB</p>
                 </div>
             </div>

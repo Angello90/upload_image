@@ -56,3 +56,12 @@
     50% { left: calc(100% - 70px); } 
     100% { left: 0; }
 }
+
+/*-------------------*/
+
+@media screen and (max-width: 800px) {
+    .container_loader {
+        width: 90%;
+    }
+
+}

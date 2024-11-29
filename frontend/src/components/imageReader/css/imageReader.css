@@ -17,6 +17,7 @@
     display: flex;
     gap: 20px;
 }
+
 .links a,
 .links button{
     display: flex;
@@ -41,4 +42,42 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+ @media screen and (max-width: 800px) {
+    #container_image_reader{
+        gap: 20px;
+    }
+    #container_image_reader.container_image_dark #drag_and_drop{
+        box-shadow: 9px 9px 20px 0px #21293671;
+    }
+    #image_file{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .links{
+        gap: 10px;
+    }
+    .links a,
+    .links button{
+        padding: 10px 15px;
+    }
+    .links a img,
+    .links button img{
+        width: 15px;
+        height: 15px;
+    }
+    
+ }
+
+
+
+ @media screen and (max-width: 422px) {
+    #drag_and_drop {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
 }

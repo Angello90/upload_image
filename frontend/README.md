@@ -1,8 +1,13 @@
-# React + Vite
+# Frontend du projet de téléchargement d'image
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Il s'agit de la partie frontale du projet Upload Image. Il est chargé de fournir une interface utilisateur pour télécharger des images et interagir avec les services backend.
 
-Currently, two official plugins are available:
+## Technologies utilisées
+- [React](https://fr.react.dev/)
+- [Vite](https://vite.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Caractéristiques
+- Fonctionnalité de téléchargement d'images
+- Aperçu de l'image avant le téléchargement
+- Possibilité de télécharger l'image, copier le lien ou partager le lien de l'image

@@ -4,12 +4,12 @@ import Header from './components/header/header'
 import DragAndDrop from './components/dragAndDrop/DragAndDrop'
 import Loader from './components/loader/loader'
 import ImageReader from './components/imageReader/imageReader'
-
+import Footer from './components/footer/footer'
+// import ErrorNotif from './components/errorNotif/errorNotif'
 
 const MAX_FILE_SIZE = 2097152
 
 function App() {
-
 
   const [theme, setTheme] = useState('light')
   const [link_image, setLink_image] = useState("src/assets/Moon_fill.svg")
@@ -18,7 +18,6 @@ function App() {
   const [flag_ImageReader, setflags_ImageReader] = useState(false)
   const [flag_Loader, setflags_Loader] = useState(false)
   const [flag_DragAndDrop, setflags_DragAndDrop] = useState(true)
-
 
   useEffect(() => {
     document.getElementById("browse_files").addEventListener("change", handleFile, false);
@@ -49,7 +48,7 @@ function App() {
       })
       if (res.ok) {
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
         setImage("http://localhost:3000"+data.filePath)
       } else {
         console.log('error')
@@ -69,7 +68,7 @@ function App() {
 
   const check_size_file = (file) => {
     if (file.size > MAX_FILE_SIZE) {
-      alert('File size is too large')
+      // alert('File size is too large')
       return false
     }
     return true
@@ -79,7 +78,7 @@ function App() {
     if (file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'image/gif') {
       return true
     }
-    alert('File format is not supported')
+    // alert('File format is not supported')
     return false
   }
 
@@ -97,7 +96,7 @@ function App() {
     e.preventDefault();
     e.stopPropagation();
     const file = e.dataTransfer.files[0];
-    console.log(check_format_file(file));
+    // console.log(check_format_file(file));
     if (!check_size_file(file) || !check_format_file(file)) {
       file.value = null
       return
@@ -113,7 +112,10 @@ function App() {
         {flag_DragAndDrop && <DragAndDrop ondrop={handle_drop} theme={theme} />}
         {flag_ImageReader && <ImageReader image={image} theme={theme}/>}
         {flag_Loader && <Loader theme={theme} />}
+        {/* <Loader theme={theme} /> */}
+        {/* <ErrorNotif errorText="File size is too large" themeNotif="error" /> */}
       </div>
+      <Footer theme={theme} />
     </>
   )
 }
